@@ -3,6 +3,7 @@ import uuid from 'uuid';
 import style from './App.css';
 import Title from '../components/Title';
 import TodoList from '../components/TodoList';
+import TodoForm from '../components/TodoForm';
 import { hot } from 'react-hot-loader';
 
 
@@ -41,6 +42,7 @@ class App extends React.Component {
                     number={this.state.data.length}/>
                 <TodoList list={this.state.data}
                     remove={this.removeTodo.bind(this)}/>
+                <TodoForm add={this.addTodo.bind(this)}/>
             </div>
         );
     }
